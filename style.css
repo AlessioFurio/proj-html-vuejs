@@ -75,14 +75,16 @@ ul {
 
     /*fine header*/
 
-    .main {
+     .main {
         background-color: #ecf2f9;
+        width: 100%;
     }
 
     .main .container-section {
         height: calc(100vh - 80px);
+        padding: 0;
     }
-
+/*
     .main .content-section {
         display: flex;
         justify-content: center;
@@ -90,20 +92,14 @@ ul {
         min-width: 500px;
         height: 100%;
     }
-
+*/
     .cta {
-        max-width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        max-width: 100%;
     }
 
     .cta-content {
-        width: 70%;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
+        width: 75%;
+        margin: auto;
     }
 
     .subtitle {
@@ -113,7 +109,6 @@ ul {
     }
 
     .cta-title {
-        width: 60%;
         margin-bottom: 20px;
     }
 
@@ -123,7 +118,6 @@ ul {
     }
 
     .cta-paragraph {
-        width: 60%;
         margin-bottom: 20px;
     }
 
@@ -138,10 +132,9 @@ ul {
     }
 
     .main-img {
-        display: flex;
-        align-items: center;
-        min-width: 50%;
-        height: 100%;
+        text-align: center;
+        width: 100%;
+        height: 500px;
         position: relative;
     }
 
@@ -150,8 +143,9 @@ ul {
         height: 100%;
         object-fit: contain;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 1;
     }
 
@@ -160,10 +154,14 @@ ul {
         height: 100%;
         object-fit: contain;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 2;
+
     }
+
+
 
     /*fine main*/
 
@@ -344,14 +342,14 @@ ul {
     }
 
     .video {
-        min-width: 500px;
+        max-width: 100%;
         position: relative;
         padding-bottom: 50px;
         text-align: center;
     }
 
     .video img {
-        max-width: 100%;
+        max-width: 80%;
         height: 100%;
         object-fit: cover;
     }
@@ -529,16 +527,16 @@ ul {
     }
 
     .wp-cubo-diagonale {
-        min-width: 200px;
+        min-width: 120px;
         min-height: 200px;
-        max-width: 250px;
-        max-height: 250px;
+        max-width: 180px;
+        max-height: 200px;
     }
 
     .wp-circle02 {
-        min-width: 120px;
+        min-width: 100px;
         min-height: 120px;
-        max-width: 150px;
+        max-width: 120px;
         max-height: 150px;
     }
 
@@ -553,7 +551,7 @@ ul {
         position: absolute;
         top: 70%;
         left: 60%;
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -50%);
     }
 
     .wp-cubo-diagonale img,
@@ -626,7 +624,7 @@ ul {
         color:  #eceeef;
     }
 
-    .copyright{
+    .copyright {
         text-align: center;
         color: #ccc;
         padding-top: 30px;
@@ -635,6 +633,22 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+
+    .main .content-section {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    .cta {
+        max-width: 50%;
+    }
+
+    .main-img {
+        max-width: 100%;
+        height: 100%;
+    }
+
     .banner {
         max-width: 70%;
     }
@@ -645,6 +659,10 @@ ul {
 
     .information {
         width: 50%;
+    }
+
+    .video img {
+        max-width: 100%;
     }
 
 }
