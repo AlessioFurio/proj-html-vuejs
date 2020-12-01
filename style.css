@@ -21,7 +21,7 @@ ul {
 }
 
 .content-section {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -92,7 +92,7 @@ ul {
     }
 
     .cta {
-        min-width: 50%;
+        max-width: 50%;
         height: 100%;
         display: flex;
         justify-content: flex-end;
@@ -256,6 +256,7 @@ ul {
     }
 
     .description-card h1 {
+        width: 80%;
         margin-bottom: 10px;
     }
 
@@ -327,7 +328,7 @@ ul {
         left: 40px;
         bottom: 20px;
     }
-    
+
     .video-plan .cta {
         width: 100%;
         margin: auto;
@@ -372,6 +373,200 @@ ul {
 
     .video-plan .cta-title {
         color: #fff;
+    }
+
+    /*fine video plan*/
+
+    .banners {
+        padding-top: 100px;
+        width: 100%;
+    }
+
+    .banner {
+        margin: auto;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #eceeef;
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .banner-date span {
+        text-align: center;
+    }
+
+    .date {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .banner-date span:first-child {
+        color: #1eae96;
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .banner-date span:nth-child(2){
+        font-weight: 500;
+    }
+
+    .cta-button.btn-ticket a {
+        padding: 15px 40px;
+    }
+
+    .upcoming-date .discover-now {
+        border: none;
+    }
+
+    /*fine upcoming*/
+
+    .review {
+        background-color: #eceeef;
+    }
+
+    .review .description-card {
+        text-align: left;
+    }
+
+    .review .description-card h1 {
+        font-size: 16px;
+        color: #343142;
+    }
+
+    .review .description-card p {
+        font-size: 14px;
+    }
+
+    .review .card {
+        min-width: 40%;
+    }
+
+    .author-review {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wp-foto {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    .wp-foto img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+    /*fine review*/
+
+    .newsletter {
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    .container-newsletter {
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .circle {
+        width: 10%;
+        text-align: center;
+    }
+
+    .circle i {
+        color: #1eae96;
+        font-size: 40px;
+    }
+
+    .content-newsletter {
+        width: 70%;
+        text-align: center;
+    }
+
+    .content-newsletter h1 {
+        font-size: 35px;
+    }
+
+    .content-newsletter h1 span {
+        color: #1eae96;
+        font-weight: 500;
+    }
+
+    .content-newsletter p {
+        margin: auto;
+        width: 60%;
+        font-weight: 500;
+        padding-bottom: 50px;
+    }
+
+    .content-newsletter input {
+        width: 50%;
+        padding: 13px;
+        border-radius: 5px;
+        border: none;
+        background-color: #eceeef;
+    }
+
+    .content-newsletter button {
+        padding: 13px;
+        border-radius: 5px;
+        border: none;
+        background-color: #1eae96;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .cube-circle {
+        width: 20%;
+        position: relative;
+    }
+
+    .wp-cubo-diagonale {
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .wp-circle02 {
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .wp-cubo-diagonale {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .wp-circle02 {
+        position: absolute;
+        top: 70%;
+        left: 60%;
+        transform: translate(-50%, -10%);
+    }
+
+    .wp-cubo-diagonale img,
+    .wp-circle02 img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        max-width: 70%;
     }
 }
 
@@ -435,6 +630,21 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .banners {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .banner {
+        width: 47%;
+    }
+
+    .review .card {
+        min-width: 30%;
     }
 
 }
