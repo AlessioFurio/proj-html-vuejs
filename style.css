@@ -29,7 +29,7 @@ ul {
     padding-top: 100px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
 
     header {
         width: 100%;
@@ -562,12 +562,91 @@ ul {
         height: 100%;
         object-fit: contain;
     }
+
+    /*fine newsletter*/
+
+    footer {
+        background-color: #060613;
+        padding: 100px 0 70px;
+    }
+
+    .container-footer {
+        width: 80%;
+        margin: auto;
+        color:  #ccc;
+        font-size: 14px;
+    }
+
+    .information {
+        width: 100%;
+    }
+
+    .contacts h4,
+    .nav-footer h4 {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .social ul {
+        display: flex;
+        padding: 25px 0;
+    }
+
+    .contacts ul li,
+    .nav-footer ul li {
+        padding: 10px 0;
+    }
+
+    .social ul li a {
+        padding-right: 30px;
+    }
+
+    .social i {
+        color:  #eceeef;
+        font-size: 25px;
+    }
+
+    .nav-footer {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-footer ul {
+        height: 100%;
+        padding: 0 10px;
+    }
+
+    .nav-footer ul:nth-of-type(2){
+        height: 75%;
+    }
+
+    .nav-footer ul li a {
+        color:  #eceeef;
+    }
+
+    .copyright{
+        text-align: center;
+        color: #ccc;
+        padding-top: 30px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
     .banner {
         max-width: 70%;
     }
+
+    .container-footer {
+        display: flex;
+    }
+
+    .information {
+        width: 50%;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
