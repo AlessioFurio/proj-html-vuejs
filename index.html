@@ -16,37 +16,36 @@
     <body>
 
         <div id="root">
-            <!-- <div class="container"> -->
-                <header>
-                    <div class="logo">
-                        <div class="wp-img">
-                            <img src="images/dark-logo.png" alt="img-logo">
-                        </div>
+            <header>
+                <div class="logo">
+                    <img src="images/dark-logo.png" alt="">
+                </div>
+                <div class="toggle-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li v-for="link in navMenu">
+                            <a href="">{{link}} <i class="fas fa-angle-down"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="menu-lang-search">
+                    <div class="lang">
+                        <img src="images/en.png" alt="img-flag-uk">
+                        <a href="#">English <i class="fas fa-angle-down"></i></a>
+                        <i class="far fa-user-circle"></i>
                     </div>
-                    <nav class="nav-menu">
-                        <ul>
-                            <li v-for="link in navMenu">
-                                <a href="">{{link}} <i class="fas fa-angle-down"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="menu-lang-search">
-                        <div class="lang">
-                            <img src="images/en.png" alt="img-flag-uk">
-                            <a href="#">English <i class="fas fa-angle-down"></i></a>
-                            <i class="far fa-user-circle"></i>
-                        </div>
-                        <div class="search">
-                            <input type="text" name="" value="" placeholder="Search...">
-                            <i class="fas fa-search"></i>
-                        </div>
+                    <div class="search">
+                        <input type="text" name="" value="" placeholder="Search...">
+                        <i class="fas fa-search"></i>
                     </div>
-                </header> <!-- fine header -->
-            <!-- </div> -->
+                </div>
+            </header>   <!-- fine header -->
 
-
-                <section class="main">
-                    <div class="container-section">
+            <section class="main">
+                <div class="container-section">
+                    <div class="content-section">
                         <div class="cta">
                             <div class="cta-content">
                                 <div class="cta-subtitle">
@@ -68,211 +67,223 @@
                             <img src="images/home-business-hero-avatar.png" alt="img-avatar-business" class="manager">
                         </div>
                     </div>
-                </section> <!-- fine main -->
+                </div>
+            </section>  <!-- fine main -->
 
 
-                <section class="service">
-                    <div class="container-section">
-                        <div class="content-section">
-                            <div class="titles-section">
-                                <h2 class="subtitle">Let's dream big togheter</h2>
-                                <h1>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new edge of digitalization</h1>
-                            </div>
-                            <div class="grid-services">
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
-
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
-
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
-
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
-
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
-
-                                <div class="service-item">
-                                    <h3>One to One</h3>
-                                    <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                                </div>
+            <section class="service">
+                <div class="container-section padding-top">
+                    <div class="content-section">
+                        <div class="titles-section">
+                            <h2 class="subtitle">Let's dream big togheter</h2>
+                            <h1>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new edge of digitalization</h1>
+                        </div>
+                        <div class="grid-services">
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
 
-                            <div class="buttons">
-                                <div class="cta-button white"><a href="">Learn More</a></div>
-                                <div class="cta-button"><a href="">Get started today</a></div>
-                            </div>
-                         </div> <!-- fine content section -->
-                    </div>  <!-- fine container section -->
-                </section>  <!-- fine section service -->
-
-
-                <section class="help-you">
-                    <div class="container-section">
-                        <div class="content-section">
-                            <div class="titles-section">
-                                <h2 class="subtitle">Let's dream big togheter</h2>
-                                <h1 class="title">Explore how can I help you</h1>
-                            </div>
-                            <div class="cards">
-
-                                <div class="card">
-                                    <div class="card-wp-img">
-                                        <img src="images/card1.jpg" alt="">
-                                    </div>
-                                    <div class="description-card">
-                                        <h1 class="title-card">Consultative Training</h1>
-                                        <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
-                                    </div>
-                                    <div class="discover-now">
-                                        <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-wp-img">
-                                        <img src="images/card2.jpg" alt="">
-                                    </div>
-                                    <div class="description-card">
-                                        <h1 class="title-card">Consultative Training</h1>
-                                        <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
-                                    </div>
-                                    <div class="discover-now">
-                                        <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-wp-img">
-                                        <img src="images/card3.jpg" alt="">
-                                    </div>
-                                    <div class="description-card">
-                                        <h1 class="title-card">Consultative Training</h1>
-                                        <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
-                                    </div>
-                                    <div class="discover-now">
-                                        <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                    </div>
-                                </div>
-
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
 
-                            <div class="dots">
-                                <i class="fas fa-circle"></i>
-                                <i class="far fa-circle"></i>
-                                <i class="far fa-circle"></i>
-                            </div>
-                         </div> <!-- fine content section -->
-                    </div>  <!-- fine container section -->
-                </section>  <!-- fine section help -->
-
-
-                <section class="help-you-two">
-                    <div class="container-section">
-                        <div class="content-section">
-                            <div class="titles-section">
-                                <h2 class="subtitle">Let's dream big togheter</h2>
-                                <h1 class="title">Explore how can I help you</h1>
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
 
-                            <div class="cards cards-help-you-two">
-
-                                <div class="card card-help-you-two">
-                                    <div class="card-wp-img">
-                                        <img src="images/card4.jpg" alt="">
-                                        <div class="price">
-                                            <h4>$40.00</h4>
-                                            <p>Learning to write as a professional author</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="card card-help-you-two">
-                                    <div class="card-wp-img">
-                                        <img src="images/card4.jpg" alt="">
-                                        <div class="price">
-                                            <h4>$40.00</h4>
-                                            <p>Learning to write as a professional author</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="card card-help-you-two">
-                                    <div class="card-wp-img">
-                                        <img src="images/card4.jpg" alt="">
-                                        <div class="price">
-                                            <h4>$40.00</h4>
-                                            <p>Learning to write as a professional author</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="card card-help-you-two">
-                                    <div class="card-wp-img">
-                                        <img src="images/card4.jpg" alt="">
-                                        <div class="price">
-                                            <h4>$40.00</h4>
-                                            <p>Learning to write as a professional author</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div> <!-- fine cards -->
-                            <div class="paragraph-cards-help-you-two">
-                                <p>Take the control of their life back and start doing things to make their dream come true.
-                                    <a href="#">View all courses <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </p>
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
-                         </div> <!-- fine content section -->
-                    </div>  <!-- fine container section -->
-                </section>  <!-- fine section service -->
 
-
-                <section class="video-plan">
-                    <div class="container-section">
-                        <div class="content-section">
-                            <div class="video">
-                                <img src="images/img-video-plan.jpg" alt="">
-                                <div class="wp-img-yt">
-                                    <img src="images/icon-yt.png" alt="">
-                                </div>
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
-                            <div class="cta">
-                                <div class="cta-content">
-                                    <div class="cta-subtitle">
-                                        <h2 class="subtitle">New Challenges, New Skills</h2>
-                                    </div>
-                                    <div class="cta-title">
-                                        <h1>Build your own life coaching business</h1>
-                                    </div>
-                                    <div class="cta-paragraph">
-                                        <p>Whole-life Business Coaching for committed entrepeneurs</p>
-                                    </div>
-                                    <div class="cta-button">
-                                        <a href="#">Get started today</a>
-                                    </div>
-                                </div>
+
+                            <div class="service-item">
+                                <h3>One to One</h3>
+                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
                         </div>
 
-                    </div>
-                </section> <!-- fine main -->
+                        <div class="buttons padding-top">
+                            <div class="cta-button white"><a href="">Learn More</a></div>
+                            <div class="cta-button"><a href="">Get started today</a></div>
+                        </div>
+
+                     </div> <!-- fine content section -->
+                </div>  <!-- fine container section -->
+            </section>  <!-- fine section service -->
+
+            <section class="help-you">
+                <div class="container-section">
+                    <div class="content-section">
+                        <div class="titles-section">
+                            <h2 class="subtitle">Let's dream big togheter</h2>
+                            <h1 class="title">Explore how can I help you</h1>
+                        </div>
+                        <div class="cards">
+
+                            <div class="card">
+                                <div class="card-wp-img">
+                                    <img src="images/card1.jpg" alt="">
+                                </div>
+                                <div class="description-card">
+                                    <h1 class="title-card">Consultative Training</h1>
+                                    <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
+                                </div>
+                                <div class="discover-now">
+                                    <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-wp-img">
+                                    <img src="images/card2.jpg" alt="">
+                                </div>
+                                <div class="description-card">
+                                    <h1 class="title-card">Consultative Training</h1>
+                                    <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
+                                </div>
+                                <div class="discover-now">
+                                    <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-wp-img">
+                                    <img src="images/card3.jpg" alt="">
+                                </div>
+                                <div class="description-card">
+                                    <h1 class="title-card">Consultative Training</h1>
+                                    <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
+                                </div>
+                                <div class="discover-now">
+                                    <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="dots">
+                            <i class="fas fa-circle"></i>
+                            <i class="far fa-circle"></i>
+                            <i class="far fa-circle"></i>
+                        </div>
+                    </div> <!-- fine content section -->
+                 </div>  <!-- fine container section -->
+             </section>  <!-- fine section help  -->
+
+
+            <section class="help-you-two">
+                 <div class="container-section">
+                     <div class="content-section">
+                         <div class="titles-section">
+                             <h2 class="subtitle">Let's dream big togheter</h2>
+                             <h1 class="title">Explore how can I help you</h1>
+                         </div>
+
+                         <div class="cards cards-help-you-two">
+
+                             <div class="card card-help-you-two">
+                                 <div class="card-wp-img">
+                                     <img src="images/card4.jpg" alt="">
+                                     <div class="price">
+                                         <h4>$40.00</h4>
+                                         <p>Learning to write as a professional author</p>
+                                     </div>
+
+                                 </div>
+                             </div>
+
+                             <div class="card card-help-you-two">
+                                 <div class="card-wp-img">
+                                     <img src="images/card4.jpg" alt="">
+                                     <div class="price">
+                                         <h4>$40.00</h4>
+                                         <p>Learning to write as a professional author</p>
+                                     </div>
+
+                                 </div>
+                             </div>
+
+                             <div class="card card-help-you-two">
+                                 <div class="card-wp-img">
+                                     <img src="images/card4.jpg" alt="">
+                                     <div class="price">
+                                         <h4>$40.00</h4>
+                                         <p>Learning to write as a professional author</p>
+                                     </div>
+
+                                 </div>
+                             </div>
+
+                             <div class="card card-help-you-two">
+                                 <div class="card-wp-img">
+                                     <img src="images/card4.jpg" alt="">
+                                     <div class="price">
+                                         <h4>$40.00</h4>
+                                         <p>Learning to write as a professional author</p>
+                                     </div>
+
+                                 </div>
+                             </div>
+
+                         </div> <!-- fine cards -->
+                         <div class="paragraph-cards-help-you-two">
+                             <p>Take the control of their life back and start doing things to make their dream come true.
+                                 <a href="#">View all courses <i class="fas fa-long-arrow-alt-right"></i></a>
+                             </p>
+                         </div>
+                      </div> <!-- fine content section -->
+                 </div>  <!-- fine container section -->
+             </section>  <!-- fine section help 2 -->
+
+
+             <section class="video-plan">
+                 <div class="container-section">
+                     <div class="content-section">
+                        <div class="cube">
+                            <img src="images/cubo.png" alt="">
+                        </div>
+                         <div class="video">
+                             <img src="images/img-video-plan.jpg" alt="">
+                             <div class="wp-img-yt">
+                                 <img src="images/icon-yt.png" alt="">
+                             </div>
+                         </div>
+                         <div class="cta">
+                             <div class="cta-content">
+                                 <div class="cta-title">
+                                     <h1>To Thrive in Business Today, You'll Need a Good Plan </h1>
+                                 </div>
+                                 <div class="cta-subtitle">
+                                    <h2 class="subtitle"><i class="far fa-arrow-alt-circle-right"></i> How can we help?</h2>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+             </section> <!-- fine main -->
+
+
+             <section class="help-you">
+                 <div class="container-section">
+                     <div class="content-section">
+                         <div class="titles-section">
+                             <h2 class="subtitle">Wanna Transform your Life</h2>
+                             <h1 class="title">Upcoming Events</h1>
+                         </div>
+
+                     </div> <!-- fine content section -->
+                  </div>  <!-- fine container section -->
+              </section>  <!-- fine section help  -->
+
 
         </div> <!-- fine app Vue -->
 
