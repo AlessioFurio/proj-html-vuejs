@@ -10,10 +10,13 @@ var app = new Vue({
 
 	methods: {
 
+		goUp() {
+			const element = document.getElementById('header');
+    			element.scrollIntoView({ behavior: 'smooth' });
+		}
 
 	}, // fine methods
 
 	mounted() {
-
 	} // fine mounted
 });
