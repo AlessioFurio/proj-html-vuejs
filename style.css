@@ -430,6 +430,9 @@ ul {
 
     .video-plan {
         background-color: #343142;
+        background-image: url('images/globe.png');
+        background-repeat: no-repeat;
+        background-position: right top;
         position: relative;
     }
 
@@ -446,11 +449,7 @@ ul {
 
     .video-plan .cta .cta-content {
         width: 100%;
-        text-align: center;
-    }
-
-    .video-plan .cta .cta-content .cta-title {
-        margin: auto;
+        text-align: left;
     }
 
     .video {
@@ -483,6 +482,42 @@ ul {
 
     .video-plan .cta-title {
         color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .video-plan .cta .cta-subtitle {
+        text-align: left;
+    }
+
+    .video-plan .cta .cta-subtitle h2 {
+        color: #fff;
+        transition: 0.50s all ease-in-out;
+    }
+
+    .video-plan .cta .cta-subtitle h2:hover {
+        color: #1eae96;
+    }
+
+    .video-plan .cta .cta-subtitle h2 i {
+        cursor: pointer;
+    }
+
+    .paragraph {
+        display: none;
+        color: #fff;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d1d1d1;
+        max-width: 70%;
+    }
+
+    .show {
+        display: block;
+    }
+
+    #colorSelect,
+    .colorH2 {
+        color: #1eae96;
     }
 
     /*fine video plan*/
@@ -816,7 +851,7 @@ ul {
     }
 
     .video img {
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .lateral-icon {
@@ -897,7 +932,8 @@ ul {
     }
 
     .video {
-        min-width: 700px;
+        max-width: 800px;
+        padding-left: 100px;
     }
 
     .video-plan .content-section {
@@ -959,7 +995,7 @@ ul {
     }
 
     .cta {
-        padding-left: 100px;
+        padding-bottom: 100px;
     }
 
     .cta-title {

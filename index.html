@@ -279,7 +279,22 @@
                                  <h1>To Thrive in Business Today, You'll Need a Good Plan </h1>
                              </div>
                              <div class="cta-subtitle">
-                                <h2 class="subtitle"><i class="far fa-arrow-alt-circle-right"></i> How can we help?</h2>
+                                <h2 class="subtitle" :id="isShowed && selected==1 ? 'colorSelect' : ''">
+                                    <i @click="showParagraph(), selected=1" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==1 ? 'colorH2' : ''"></i> How can we help?
+                                </h2>
+                                <p class="paragraph" :class="isShowed && selected==1 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                             </div>
+                             <div class="cta-subtitle">
+                                <h2 class="subtitle" :id="isShowed && selected==2 ? 'colorSelect' : ''">
+                                    <i @click="showParagraph(), selected=2" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==2 ? 'colorH2' : ''"></i> Why would I need a business COACH?
+                                </h2>
+                                <p class="paragraph" :class="isShowed && selected==2 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                             </div>
+                             <div class="cta-subtitle">
+                                <h2 class="subtitle" :id="isShowed && selected==3 ? 'colorSelect' : ''">
+                                    <i @click="showParagraph(), selected=3" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==3 ? 'colorH2' : ''"></i> What is one-on-one oaching?
+                                </h2>
+                                <p class="paragraph" :class="isShowed && selected==3 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                              </div>
                          </div>
                      </div>
