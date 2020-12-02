@@ -7,6 +7,7 @@ var app = new Vue({
 		navMenu: ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
 		contacts: ['382 NE 191 St # 87394 Miami, FL 33179-3899', '+1(305)547-9909 (9am - 5pm EST, Monday - Friday)', 'support@maxcoach.com'],
 		isActive: false,
+		
 	},
 
 	methods: {
@@ -24,6 +25,8 @@ var app = new Vue({
 				this.isActive = false;
 			}
 		},
+
+
 
 	}, // fine methods
 

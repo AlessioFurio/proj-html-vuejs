@@ -129,6 +129,8 @@ ul {
      .main {
         background-color: #ecf2f9;
         width: 100%;
+        position: relative;
+        overflow: hidden;
     }
 
     .main .container-section {
@@ -220,7 +222,30 @@ ul {
 
     }
 
+    .lateral-icon {
+        max-width: 50%;
+        position: absolute;
+        top: 5px;
+        right: -5px;
+        display: inline-block;
+        padding: 2px;
+        background-color: #fff;
+        box-shadow: 0 0 20px rgba(33,33,33,.4);
+        border-radius: 5px;
+    }
 
+    .container-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-icon i {
+        padding: 8px;
+        display: inline-block;
+        font-size: 20px;
+    }
 
     /*fine main*/
 
@@ -391,9 +416,14 @@ ul {
     }
 
     .paragraph-cards-help-you-two {
-        width: 50%;
+        width: 30%;
         margin: auto;
         text-align: center;
+    }
+
+    .paragraph-cards-help-you-two a {
+        color: #1eae96;
+        font-weight: 500;
     }
 
     /*fine .help-you-two */
@@ -765,10 +795,11 @@ ul {
 
     .cta {
         max-width: 50%;
+
     }
 
     .main-img {
-        max-width: 100%;
+        max-width: 45%;
         height: 100%;
     }
 
@@ -786,6 +817,17 @@ ul {
 
     .video img {
         max-width: 100%;
+    }
+
+    .lateral-icon {
+        position: absolute;
+        top: 50px;
+        right: -5px;
+        padding: 10px;
+    }
+
+    .container-icon {
+        flex-direction: column;
     }
 
 }
@@ -815,8 +857,16 @@ ul {
     }
 
     .nav-menu ul li a {
+        display: inline-block;
+        padding: 5px;
         color: #343142;
         font-weight: 500;
+        transition: .75s all ease-in-out;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #d9d9d9;
+        border-radius: 5px;
     }
 
     .nav-menu ul li a i {
@@ -908,8 +958,22 @@ ul {
         max-width: 80%;
     }
 
+    .cta {
+        padding-left: 100px;
+    }
+
+    .cta-title {
+        max-width: 100%;
+    }
+
     .banners {
         width: 70%;
         margin: auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .cta-title {
+        max-width: 70%;
     }
 }
