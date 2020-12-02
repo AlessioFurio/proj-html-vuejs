@@ -59,6 +59,7 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
 
     .toggle-menu i {
@@ -71,6 +72,56 @@ ul {
 
     .menu-lang-search {
         display: none;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        background-color: #060613;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 10;
+        display: none;
+    }
+
+    .mobile-menu-nav {
+        margin: auto;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-menu-nav ul {
+        background-color: #fff;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .mobile-menu-nav ul li {
+        text-align: center;
+        border-bottom: 1px solid #060613;
+        border-radius: 10px;
+    }
+
+    .mobile-menu-nav ul li:hover {
+        background-color: #c1c1c1;
+        transition: 1s;
+    }
+
+    .mobile-menu-nav ul li a {
+        display: block;
+        padding: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 25px;
+        color:  #343142;
+    }
+
+    .active {
+        display: block;
     }
 
     /*fine header*/
@@ -95,6 +146,7 @@ ul {
 */
     .cta {
         max-width: 100%;
+        padding-top: 50px;
     }
 
     .cta-content {
@@ -123,12 +175,19 @@ ul {
 
     .cta-button a{
         display: inline-block;
-        font-size: 12px;
+        font-size: 14px;
         color: #fff;
         border-radius: 5px;
         background-color: #1eae96;
         font-weight: bold;
         padding: 15px 20px;
+    }
+
+    .cta-button a:hover {
+        background-color: #fff;
+        color: #1eae96;
+        border: 1px solid #1eae96;
+        transition: 1s;
     }
 
     .main-img {
@@ -207,6 +266,12 @@ ul {
         padding: 15px 50px;
     }
 
+    .buttons .cta-button.white a:hover {
+        background-color: #1eae96;
+        color: #fff;
+        border: 1px solid #1eae96;
+    }
+
     /*fine services*/
 
     .help-you {
@@ -225,11 +290,21 @@ ul {
 
     .card,
     .card-help-you-two {
-        max-width: 70%;
+        max-width: 40%;
         background-color: #fff;
         border-radius: 5px;
         margin: auto;
         margin-top: 50px;
+        cursor: pointer;
+    }
+
+    .help-you .card {
+        transition: 1s all ease-in-out;
+    }
+
+    .help-you .card:hover {
+        box-shadow: 0 0 100px rgba(33,33,0,.9);
+        padding: 20px;
     }
 
     .card-wp-img {
@@ -281,9 +356,16 @@ ul {
     /*fine help you*/
 
     .card-help-you-two {
-        max-width: 60%;
+        max-width: 40%;
         background-color: rgba(0, 0, 0, 0.4);
         position: relative;
+        cursor: pointer;
+        transition: 1s all ease-in-out;
+    }
+
+    .card-help-you-two:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 20px rgba(33,33,33,.9);
     }
 
     .card-help-you-two img {
@@ -388,6 +470,15 @@ ul {
         background-color: #eceeef;
         padding: 20px 0;
         margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 1s all ease-in-out;
+    }
+
+    .banner:hover {
+        background-color: #fff;
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+
     }
 
     .banner-date span {
@@ -519,6 +610,14 @@ ul {
         background-color: #1eae96;
         color: #fff;
         font-weight: 500;
+        cursor: pointer;
+        transition: 1s all ease-in-out;
+    }
+
+    .content-newsletter button:hover {
+        background-color: #fff;
+        color: #1eae96;
+        border: 1px solid #1eae96;
     }
 
     .cube-circle {
@@ -654,6 +753,10 @@ ul {
 
 @media screen and (min-width: 768px) {
 
+    .mobile-menu-nav {
+        max-width: 80%;
+    }
+
     .main .content-section {
         display: flex;
         height: 100%;
@@ -690,6 +793,10 @@ ul {
 @media screen and (min-width: 992px) {
 
     .toggle-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
         display: none;
     }
 
@@ -799,5 +906,10 @@ ul {
     .search input {
         border: none;
         max-width: 80%;
+    }
+
+    .banners {
+        width: 70%;
+        margin: auto;
     }
 }

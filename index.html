@@ -20,7 +20,7 @@
                 <div class="logo">
                     <img src="images/dark-logo.png" alt="">
                 </div>
-                <div class="toggle-menu">
+                <div @click="toggleMenu()" class="toggle-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <nav class="nav-menu">
@@ -39,6 +39,14 @@
                     <div class="search">
                         <input type="text" name="" value="" placeholder="Search...">
                         <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="mobile-menu" :class="isActive ? 'active' : ''">
+                    <div class="mobile-menu-nav">
+                        <ul>
+                            <li v-for="link in navMenu"><a href="">{{link}}</a></li>
+                        </ul>
                     </div>
                 </div>
             </header>   <!-- fine header -->
@@ -202,7 +210,7 @@
 
                              <div class="card card-help-you-two">
                                  <div class="card-wp-img">
-                                     <img src="images/card4.jpg" alt="">
+                                     <img src="images/card5.jpg" alt="">
                                      <div class="price">
                                          <h4>$40.00</h4>
                                          <p>Learning to write as a professional author</p>
@@ -213,7 +221,7 @@
 
                              <div class="card card-help-you-two">
                                  <div class="card-wp-img">
-                                     <img src="images/card4.jpg" alt="">
+                                     <img src="images/card6.jpg" alt="">
                                      <div class="price">
                                          <h4>$40.00</h4>
                                          <p>Learning to write as a professional author</p>
@@ -224,7 +232,7 @@
 
                              <div class="card card-help-you-two">
                                  <div class="card-wp-img">
-                                     <img src="images/card4.jpg" alt="">
+                                     <img src="images/card7.jpg" alt="">
                                      <div class="price">
                                          <h4>$40.00</h4>
                                          <p>Learning to write as a professional author</p>
