@@ -15,12 +15,13 @@ var app = new Vue({
 		ctaSubtitle: ['How can we help?', "Why would I need a business COACH?", "What is one-on-one coaching?"],
 		imgHelpYou: ['images/card1.jpg', 'images/card2.jpg', 'images/card3.jpg'],
 		imgHelpYouTwo: ['images/card4.jpg', 'images/card5.jpg', 'images/card6.jpg', 'images/card7.jpg'],
+		iconService: ["far fa-lightbulb", "fas fa-map-marker-alt", "far fa-clock", "fas fa-laptop", "far fa-life-ring", "fas fa-cog"],
 	},
 
 	methods: {
 
 		goUp() {  // x button scrollUP
-			const element = document.getElementById('header');
+			const element = document.getElementById('main');
     			element.scrollIntoView({ behavior: 'smooth' });
 		},
 
@@ -37,11 +38,11 @@ var app = new Vue({
 			this.isShowed = !this.isShowed;
 		},
 
-		overCard(){
+		overCard(){  // x effetto mouseenter x le card
 			this.selectOver = true;
 		},
 
-		overCardLeave (){
+		overCardLeave (){   // x effetto mouseleave sulle card
 			this.selectOver = false;
 		}
 
@@ -50,5 +51,9 @@ var app = new Vue({
 	}, // fine methods
 
 	mounted() {
+		window.addEventListener("scroll", function(){  // x sticky header
+			var header = document.getElementById("header");
+			header.classList.toggle("sticky", window.scrollY > 0);
+		});
 	} // fine mounted
 });

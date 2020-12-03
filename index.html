@@ -51,7 +51,7 @@
                 </div>
             </header>   <!-- fine header -->
 
-            <section class="main">
+            <section class="main" id="main">
                 <div class="container-section">
                      <div class="content-section">
                         <div class="cta">
@@ -96,7 +96,10 @@
                             <h1>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new edge of digitalization</h1>
                         </div>
                         <div class="grid-services">
-                            <div v-for="n in 6" class="service-item">
+                            <div v-for="(n, indice) in 6" class="service-item">
+                                <div class="wp-icon">
+                                    <i :class="iconService[indice]"></i>
+                                </div>
                                 <h3>One to One</h3>
                                 <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
