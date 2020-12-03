@@ -145,8 +145,8 @@
 
 
             <section class="help-you-two">
-                 <div class="container-section">
-                     <div class="content-section">
+                <div class="container-section">
+                    <div class="content-section">
                          <div class="titles-section">
                              <h2 class="subtitle">Let's dream big togheter</h2>
                              <h1 class="title">Explore how can I help you</h1>
@@ -154,24 +154,33 @@
 
                         <div class="cards cards-help-you-two">
 
-                            <div class="card card-help-you-two" v-for="(n, index) in imgHelpYouTwo">
+                            <div class="card card-help-you-two" v-for="(n, index) in imgHelpYouTwo" @mouseover="overCard" @mouseleave="overCardLeave">
                                 <div class="card-wp-img">
                                     <img :src="imgHelpYouTwo[index]" alt="">
-                                    <div class="price">
-                                         <h4>$40.00</h4>
-                                         <p>Learning to write as a professional author</p>
+                                    <div @mouseover="overCard" class="price" :id="selectOver ? 'overCardFontSize' : '' ">
+                                        <h4>$40.00</h4>
+                                        <p>Learning to write as a professional author</p>
+                                        <div :class="selectOver ? 'active' : '' " class="description-card-help-you-two">
+                                            <span>
+                                                <i class="far fa-save"></i>20 Lessons
+                                            </span>
+                                            <span>
+                                                <i class="far fa-user"></i>50 Students
+                                            </span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                          </div> <!-- fine cards -->
 
-                         <div class="paragraph-cards-help-you-two">
-                             <p>Take the control of their life back and start doing things to make their dream come true.
-                                 <a href="#">View all courses <i class="fas fa-long-arrow-alt-right"></i></a>
-                             </p>
-                         </div>
-                      </div> <!-- fine content section -->
-                 </div>  <!-- fine container section -->
+                        <div class="paragraph-cards-help-you-two">
+                            <p>Take the control of their life back and start doing things to make their dream come true.
+                                <a href="#">View all courses <i class="fas fa-long-arrow-alt-right"></i></a>
+                            </p>
+                        </div>
+                    </div> <!-- fine content section -->
+                </div>  <!-- fine container section -->
              </section>  <!-- fine section help 2 -->
 
 

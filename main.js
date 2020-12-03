@@ -11,7 +11,7 @@ var app = new Vue({
 		selected: undefined,
 		over: false,
 		bannerIndex: undefined,
-		selectOver: undefined,
+		selectOver: false,
 		ctaSubtitle: ['How can we help?', "Why would I need a business COACH?", "What is one-on-one coaching?"],
 		imgHelpYou: ['images/card1.jpg', 'images/card2.jpg', 'images/card3.jpg'],
 		imgHelpYouTwo: ['images/card4.jpg', 'images/card5.jpg', 'images/card6.jpg', 'images/card7.jpg'],
@@ -37,6 +37,13 @@ var app = new Vue({
 			this.isShowed = !this.isShowed;
 		},
 
+		overCard(){
+			this.selectOver = true;
+		},
+
+		overCardLeave (){
+			this.selectOver = false;
+		}
 
 
 

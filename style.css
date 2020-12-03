@@ -409,6 +409,7 @@ ul {
 
     .price h4 {
         color: #1eae96;
+        font-size: 18px;
     }
 
     .price p {
@@ -424,6 +425,36 @@ ul {
     .paragraph-cards-help-you-two a {
         color: #1eae96;
         font-weight: 500;
+    }
+
+    #overCardFontSize {
+        font-size: 18px;
+    }
+
+    .description-card-help-you-two {
+        display: none;
+    }
+
+    .description-card-help-you-two.active {
+        display: block;
+    }
+
+    .description-card-help-you-two span {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 16px;
+        padding-right: 20px;
+        font-weight: lighter;
+    }
+
+    .description-card-help-you-two span i {
+        margin-right: 5px;
+    }
+
+    .description-card-help-you-two p {
+        font-size: 14px;
+        font-weight: lighter;
     }
 
     /*fine .help-you-two */
