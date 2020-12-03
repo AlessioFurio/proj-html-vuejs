@@ -25,9 +25,23 @@
                 </div>
                 <nav class="nav-menu">
                     <ul>
-                        <li v-for="link in navMenu">
+                        <li v-for="(link, i) in navMenu" @mouseover="overLink(i)" @mouseleave="overLinkLeave(i)">
                             <a href="">{{link}} <i class="fas fa-angle-down"></i></a>
                         </li>
+                        <div class="dropdown-menu-home" :class="selectorLink && index==0 ? 'active' : '' " @mouseleave="leaveMenu()">
+                            <div class="container-dropdown-menu-home">
+                                <ul>
+                                    <li v-for="element in dropdownMenuHomeFirstUl"><a href="">{{element}}</a></li>
+                                </ul>
+
+                                <ul>
+                                    <li v-for="element in dropdownMenuHomeSecondUl"><a href="">{{element}}</a></li>
+                                </ul>
+                                <div class="wp-img-dropdown-menu-home">
+                                    <img src="images/homepages-mega-menu-image-alt.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </ul>
                 </nav>
                 <div class="menu-lang-search">
@@ -49,7 +63,9 @@
                         </ul>
                     </div>
                 </div>
+
             </header>   <!-- fine header -->
+
 
             <section class="main" id="main">
                 <div class="container-section">
