@@ -9,6 +9,12 @@ var app = new Vue({
 		isActive: false,
 		isShowed: false,
 		selected: undefined,
+		over: false,
+		bannerIndex: undefined,
+		selectOver: undefined,
+		ctaSubtitle: ['How can we help?', "Why would I need a business COACH?", "What is one-on-one coaching?"],
+		imgHelpYou: ['images/card1.jpg', 'images/card2.jpg', 'images/card3.jpg'],
+		imgHelpYouTwo: ['images/card4.jpg', 'images/card5.jpg', 'images/card6.jpg', 'images/card7.jpg'],
 	},
 
 	methods: {
@@ -29,7 +35,8 @@ var app = new Vue({
 
 		showParagraph () {  // x mostrare paragrafi
 			this.isShowed = !this.isShowed;
-		}
+		},
+
 
 
 

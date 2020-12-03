@@ -570,6 +570,10 @@ ul {
         padding: 15px 40px;
     }
 
+    #bgColorOnHover {
+        background-color: #6d32a8;
+    }
+
     .upcoming-date .discover-now {
         border: none;
     }

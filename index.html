@@ -96,32 +96,7 @@
                             <h1>We are pioneers of the digital approach, using leading-edge technology to simplify procedures and apply executive coaching in the new edge of digitalization</h1>
                         </div>
                         <div class="grid-services">
-                            <div class="service-item">
-                                <h3>One to One</h3>
-                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h3>One to One</h3>
-                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h3>One to One</h3>
-                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h3>One to One</h3>
-                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                            </div>
-
-                            <div class="service-item">
-                                <h3>One to One</h3>
-                                <p>Getting the necessary clarity about the current state to help you improve your game.</p>
-                            </div>
-
-                            <div class="service-item">
+                            <div v-for="n in 6" class="service-item">
                                 <h3>One to One</h3>
                                 <p>Getting the necessary clarity about the current state to help you improve your game.</p>
                             </div>
@@ -145,9 +120,9 @@
                         </div>
                         <div class="cards">
 
-                            <div class="card">
+                            <div class="card" v-for="(n, index) in imgHelpYou">
                                 <div class="card-wp-img">
-                                    <img src="images/card1.jpg" alt="">
+                                    <img :src="imgHelpYou[index]" alt="">
                                 </div>
                                 <div class="description-card">
                                     <h1 class="title-card">Consultative Training</h1>
@@ -157,33 +132,6 @@
                                     <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
-
-                            <div class="card">
-                                <div class="card-wp-img">
-                                    <img src="images/card2.jpg" alt="">
-                                </div>
-                                <div class="description-card">
-                                    <h1 class="title-card">Consultative Training</h1>
-                                    <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
-                                </div>
-                                <div class="discover-now">
-                                    <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-wp-img">
-                                    <img src="images/card3.jpg" alt="">
-                                </div>
-                                <div class="description-card">
-                                    <h1 class="title-card">Consultative Training</h1>
-                                    <p>With a coach addressing multiple issues that are off balance, affecting your business in various unconsidered ways.</p>
-                                </div>
-                                <div class="discover-now">
-                                    <a href="#">Discover Now <i class="fas fa-long-arrow-alt-right"></i></a>
-                                </div>
-                            </div>
-
                         </div>
 
                         <div class="dots">
@@ -204,53 +152,19 @@
                              <h1 class="title">Explore how can I help you</h1>
                          </div>
 
-                         <div class="cards cards-help-you-two">
+                        <div class="cards cards-help-you-two">
 
-                             <div class="card card-help-you-two">
-                                 <div class="card-wp-img">
-                                     <img src="images/card4.jpg" alt="">
-                                     <div class="price">
+                            <div class="card card-help-you-two" v-for="(n, index) in imgHelpYouTwo">
+                                <div class="card-wp-img">
+                                    <img :src="imgHelpYouTwo[index]" alt="">
+                                    <div class="price">
                                          <h4>$40.00</h4>
                                          <p>Learning to write as a professional author</p>
-                                     </div>
-
-                                 </div>
-                             </div>
-
-                             <div class="card card-help-you-two">
-                                 <div class="card-wp-img">
-                                     <img src="images/card5.jpg" alt="">
-                                     <div class="price">
-                                         <h4>$40.00</h4>
-                                         <p>Learning to write as a professional author</p>
-                                     </div>
-
-                                 </div>
-                             </div>
-
-                             <div class="card card-help-you-two">
-                                 <div class="card-wp-img">
-                                     <img src="images/card6.jpg" alt="">
-                                     <div class="price">
-                                         <h4>$40.00</h4>
-                                         <p>Learning to write as a professional author</p>
-                                     </div>
-
-                                 </div>
-                             </div>
-
-                             <div class="card card-help-you-two">
-                                 <div class="card-wp-img">
-                                     <img src="images/card7.jpg" alt="">
-                                     <div class="price">
-                                         <h4>$40.00</h4>
-                                         <p>Learning to write as a professional author</p>
-                                     </div>
-
-                                 </div>
-                             </div>
-
+                                    </div>
+                                </div>
+                            </div>
                          </div> <!-- fine cards -->
+
                          <div class="paragraph-cards-help-you-two">
                              <p>Take the control of their life back and start doing things to make their dream come true.
                                  <a href="#">View all courses <i class="fas fa-long-arrow-alt-right"></i></a>
@@ -275,33 +189,22 @@
                      </div>
                      <div class="cta">
                          <div class="cta-content">
-                             <div class="cta-title">
+                            <div class="cta-title">
                                  <h1>To Thrive in Business Today, You'll Need a Good Plan </h1>
-                             </div>
-                             <div class="cta-subtitle">
-                                <h2 class="subtitle" :id="isShowed && selected==1 ? 'colorSelect' : ''">
-                                    <i @click="showParagraph(), selected=1" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==1 ? 'colorH2' : ''"></i> How can we help?
+                            </div>
+                            <div class="cta-subtitle" v-for="(string, i) in ctaSubtitle">
+                                <h2 class="subtitle" :id="isShowed && selected==i ? 'colorSelect' : ''">
+                                    <i @click="showParagraph(), selected=i" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==i ? 'colorH2' : ''"></i> {{string}}
                                 </h2>
-                                <p class="paragraph" :class="isShowed && selected==1 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                             </div>
-                             <div class="cta-subtitle">
-                                <h2 class="subtitle" :id="isShowed && selected==2 ? 'colorSelect' : ''">
-                                    <i @click="showParagraph(), selected=2" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==2 ? 'colorH2' : ''"></i> Why would I need a business COACH?
-                                </h2>
-                                <p class="paragraph" :class="isShowed && selected==2 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                             </div>
-                             <div class="cta-subtitle">
-                                <h2 class="subtitle" :id="isShowed && selected==3 ? 'colorSelect' : ''">
-                                    <i @click="showParagraph(), selected=3" class="far fa-arrow-alt-circle-right" :class="isShowed && selected==3 ? 'colorH2' : ''"></i> What is one-on-one oaching?
-                                </h2>
-                                <p class="paragraph" :class="isShowed && selected==3 ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                                <p class="paragraph" :class="isShowed && selected==i ? 'show' : ''">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
 
-             </div>
-            </section>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
             <section class="upcoming-date">
@@ -313,7 +216,7 @@
                          </div>
 
                         <div class="banners">
-                            <div class="banner">
+                            <div class="banner" v-for="(n, index) in 6">
                                 <div class="banner-title">
                                     <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
                                     <h4>Storytelling Workshop</h4>
@@ -324,87 +227,7 @@
                                         <span>NOV</span>
                                     </div>
                                     <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="banner">
-                                <div class="banner-title">
-                                    <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
-                                    <h4>Storytelling Workshop</h4>
-                                </div>
-                                <div class="banner-date">
-                                    <div class="date">
-                                        <span>22</span>
-                                        <span>NOV</span>
-                                    </div>
-                                    <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="banner">
-                                <div class="banner-title">
-                                    <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
-                                    <h4>Storytelling Workshop</h4>
-                                </div>
-                                <div class="banner-date">
-                                    <div class="date">
-                                        <span>22</span>
-                                        <span>NOV</span>
-                                    </div>
-                                    <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="banner">
-                                <div class="banner-title">
-                                    <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
-                                    <h4>Storytelling Workshop</h4>
-                                </div>
-                                <div class="banner-date">
-                                    <div class="date">
-                                        <span>22</span>
-                                        <span>NOV</span>
-                                    </div>
-                                    <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="banner">
-                                <div class="banner-title">
-                                    <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
-                                    <h4>Storytelling Workshop</h4>
-                                </div>
-                                <div class="banner-date">
-                                    <div class="date">
-                                        <span>22</span>
-                                        <span>NOV</span>
-                                    </div>
-                                    <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="banner">
-                                <div class="banner-title">
-                                    <i class="fas fa-map-marker-alt"></i> <span>Texas, US</span>
-                                    <h4>Storytelling Workshop</h4>
-                                </div>
-                                <div class="banner-date">
-                                    <div class="date">
-                                        <span>22</span>
-                                        <span>NOV</span>
-                                    </div>
-                                    <div class="cta-button btn-ticket">
-                                        <a href="#">Get ticket</a>
+                                        <a :id="over ? 'bgColorOnHover' : ''" href="#">Get ticket</a>
                                     </div>
                                 </div>
                             </div>
@@ -417,8 +240,8 @@
 
 
                     </div> <!-- fine content section -->
-                  </div>  <!-- fine container section -->
-              </section>  <!-- fine section upcoming date  -->
+                </div>  <!-- fine container section -->
+            </section>  <!-- fine section upcoming date  -->
 
             <section class="review">
               <div class="container-section">
@@ -429,39 +252,7 @@
                       </div>
                     <div class="cards">
 
-                        <div class="card">
-                            <div class="description-card">
-                                <h1 class="title-card">High level of efficiency and scientific teaching methods</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                            <div class="author-review">
-                                <div class="wp-foto">
-                                    <img src="images/testimonial02.jpg" alt="">
-                                </div>
-                                <div class="name-profession">
-                                    <h5>Name</h5>
-                                    <p>Professione</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="description-card">
-                                <h1 class="title-card">High level of efficiency and scientific teaching methods</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                            <div class="author-review">
-                                <div class="wp-foto">
-                                    <img src="images/testimonial02.jpg" alt="">
-                                </div>
-                                <div class="name-profession">
-                                    <h5>Name</h5>
-                                    <p>Professione</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
+                        <div class="card" v-for="n in 3">
                             <div class="description-card">
                                 <h1 class="title-card">High level of efficiency and scientific teaching methods</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
